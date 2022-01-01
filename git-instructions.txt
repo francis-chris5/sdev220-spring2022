@@ -31,7 +31,7 @@ OPTIONAL: go ahead and download a clone of the repository to make sure things ge
 
 
 
-Add the git to the local folder --a single dot refers to the current directory (just like two dots is the directory above) change accordingly if you run the command from a different location
+Add the git to the local folder --a single dot refers to the current directory make sure you are at the directory level where you linked to your repository
     command: git add .
 
 
