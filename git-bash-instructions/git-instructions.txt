@@ -58,7 +58,7 @@ save the token someplace safe and copy it in for the password field (if you're n
 OPTIONAL: delete the local files to avoid confusion from multiple copies (working copies not backup copies), git write protects the folder so use admin access to delete. For the example here, up one level and "folder-name" is where the repository was pulled down to.
     command: cd ..
     command: sudo rm -r folder-Name
-          ** that's bash, for Windows Command Prompt: del foldername --> confirm --> rmdir folder-name, for powershell: remove-item -path folder-name -recurse
+          ** that's bash, for Windows Command Prompt: del foldername --> confirm --> rmdir folder-name, for powershell: remove-item -path folder-name -recurse (if it gives errors you're not in a terminal with admin privileges so either open one that is or use file explorer to delete it)
 
 
 
