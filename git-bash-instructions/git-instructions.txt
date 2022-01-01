@@ -46,12 +46,14 @@ If it's the first time you'll get an error here, use the email you set up your G
 
 
 
-push the changes to GitHub
-    command: git push origin master
+push the changes to GitHub (if you didn't change the name earlier your branch should be called "master" instead of "main" here)
+    command: git push origin main
 
 Enter your GitHub username and token (passwords are no longer accepted)
 If you need a token go to this page: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token and follow the instructions there
 save the token someplace safe and copy it in for the password field (if you're not used to bash terminals you won't see anything typing or pasting to a password input)
 
 
-OPTIONAL: delete the local files to avoid confusion from multiple copies (working copies not backup copies)
+OPTIONAL: delete the local files to avoid confusion from multiple copies (working copies not backup copies), git write protects the folder so use admin access to delete. For the example here, up one level and "folder-name" is where the repository was pulled down to.
+    command: cd ..
+    command: sudo rm -r folder-Name
