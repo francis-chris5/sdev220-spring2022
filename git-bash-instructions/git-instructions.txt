@@ -1,0 +1,57 @@
+These instructions should work in a bash or zsh terminal by default, once you run the installer for git on a W  Windows machine (which includes the GitBash terminal) these commands will work in cmd or powershell as well.
+
+create a local folder to put the repository and navigate into it
+    command: mkdir folder-name
+    command: cd folder-name
+
+
+Initialize the folder to git
+    command: git init
+
+OPTIONAL: I personally switch to just work with the main branch, the default behavior is to create a new one to merge later (I don't make name the default working branch though)
+    command: git branch -m main
+
+
+Sync the local folder to the repository
+    command: git remote add origin <<URL to Repository, copy from green button on repository homepage>>
+
+
+OPTIONAL: confirm fetch and push are available
+    command: git remote -v
+
+
+OPTIONAL: go ahead and download a clone of the repository to make sure things get located correctly (if you did not change the branch name you are on a branch called "master" instead of "main" here)
+    command: git pull origin main
+
+
+*** MAKE CHANGES TO THE REPOSITORY FILES ***
+    -copy and paste new files to this folder
+    -overwrite/append/modify the stuff in the repository
+    -etc....
+
+
+
+Add the git to the local folder --a single dot refers to the current directory (just like two dots is the directory above) change accordingly if you run the command from a different location
+    command: git add .
+
+
+
+give the commit a meaningful name to track the changes
+    command: git commit -m "A Meaningful Name"
+
+
+
+If it's the first time you'll get an error here, use the email you set up your GitHub account with, for example mine was...
+    command: git config --global user.email "francis.chris5@gmail.com"
+
+
+
+push the changes to GitHub
+    command: git push origin master
+
+Enter your GitHub username and token (passwords are no longer accepted)
+If you need a token go to this page: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token and follow the instructions there
+save the token someplace safe and copy it in for the password field (if you're not used to bash terminals you won't see anything typing or pasting to a password input)
+
+
+OPTIONAL: delete the local files to avoid confusion from multiple copies (working copies not backup copies)
