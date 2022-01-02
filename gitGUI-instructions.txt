@@ -8,3 +8,11 @@ Enter the URL of the repository you want to have local access to
 Choose a location on your local machine to put it, navigate into the parent directory and then give a folder name but DO NOT create the new folder yourself
 
 Click the button to clone the repository
+
+*** use local software to implement any changes ***
+
+Back in GitGUI Click the "Rescan" button in the lower right panel
+
+The upper left panel shows a list of all changes, select the ones you want to commit to the repository and click the button labeled "Stage Changed"
+
+The item should move from the upper left window to the lower left window
