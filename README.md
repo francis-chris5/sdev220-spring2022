@@ -3,3 +3,6 @@ After a couple years of teaching software development courses it finally dawned 
 
 For class examples I will use a bash terminal (Chromebook), zsh terminal (Macbook), Powershell host/Command Prompt/Git-Bash terminal (Windows) to pull down the repository, work through the in-class example, and push it back up so they'll have quick access to the examples and witness the power of a repository over other forms of cloud based storage.
 
+Oh yeah, and obviously we'll use the GitGUI from time to time too for those who would rather click with their mouse after long stretches of typing code (and get all those color coding and organizational benefits that comes with a GUI).
+
+
