@@ -30,7 +30,7 @@ Click the "Commit" button
 
 Click the "Push" button
 
-Confirm everything in the dialog box that pops up and push the changes onto the repository
+Confirm everything in the dialog box that pops up (you want the [remote: origin] option) and push the changes onto the repository
 
 
 
