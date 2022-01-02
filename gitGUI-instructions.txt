@@ -1,0 +1,10 @@
+
+After downloading the git-scm package for Windows you should have an app called GitGUI accessible from the start menu.
+
+Start the app and choose close a repository
+
+Enter the URL of the repository you want to have local access to
+
+Choose a location on your local machine to put it, navigate into the parent directory and then give a folder name but DO NOT create the new folder yourself
+
+Click the button to clone the repository
