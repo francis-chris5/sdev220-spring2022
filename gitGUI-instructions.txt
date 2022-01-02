@@ -1,13 +1,16 @@
 
+
+
 After downloading the git-scm package for Windows you should have an app called GitGUI accessible from the start menu.
 
-Start the app and choose close a repository
+Start the app and choose clone a repository
 
 Enter the URL of the repository you want to have local access to
+  Source: <<URL to the git repository, get from green button if you don't know it>>
+  Target: <<use browse to find the parent directory of where you want to put it, then manually add "/folder-name" at the end of the path>>
+  I always check the box to recursively scan submodules: we probably won't get there in this class, but if you pull from another git repository in yours it will download a clone of those files as well
 
-Choose a location on your local machine to put it, navigate into the parent directory and then give a folder name but DO NOT create the new folder yourself
-
-Click the button to clone the repository
+Click the button to clone the repository, you should now have local copies of the folders and files from the repository
 
 *** use local software to implement any changes ***
 
@@ -21,18 +24,21 @@ If it all looks okay click the button labeled "Stage Changed"
 
 The item should move from the upper left window to the lower left window
 
-Provide a commit message to track them,
+Provide a commit message to track them in the lower right panel,
   the first line is a brief summary or name for the changes (this will be the words that show on the main code pages on github.com between the file name and the timestamp)
   leave the second line empty
-  the third line onward is for a more detailed description of what these changes are folder
+  the third line onward is for a more detailed description of what these changes are for
 
 Click the "Commit" button
+  the modified files will disapper from the Staged Changes panel
 
 Click the "Push" button
 
 Confirm everything in the dialog box that pops up (you want the [remote: origin] option) and push the changes onto the repository
 
+While checking GitGUI out make sure you take a look at "Repository --> Visualize main's History" or "Repository --> Visualize All Branches History" up in the main menu
 
+OPTIONAL: Personally I always delete the local files aftwerwards to avoid any confusions arising from too many copies.
 
 
 
