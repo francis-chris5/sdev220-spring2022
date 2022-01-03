@@ -1,4 +1,10 @@
 
+** Please Note: these three configuration files are all python things that need done for officially releasing a package
+** This was my plan on how to cover it in class, but I'm having second thoughts about that as the plan was to do it near beginning while still creeping github features in slowly at the end of each lecture
+** if you check that link on line 10 it puts the package on one of Python's official channels rather than on github
+** there are non-empty __init__.py files in some of my plugins for blender, I think my github has a couple of those
+
+
 << create python modules >>
 << set up repository >>
 
