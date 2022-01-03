@@ -1,0 +1,14 @@
+
+<< create python modules >>
+<< set up repository >>
+
+create a file called __init__.py in the folder containing the python modules and leave it empty
+create files pyproject.toml and setup.cfg at the top level of the repository (see example at https://packaging.python.org/en/latest/tutorials/packaging-projects/)
+
+
+once all the files are in place use pip to install it
+    pip install git+https://<<url.git>>@branch#egg=package_name
+
+
+
+***Yeah... I may not show this in class, cloning repository and appending to sys.path is so much easier than those config files
