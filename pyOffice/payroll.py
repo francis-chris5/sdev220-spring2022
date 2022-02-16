@@ -17,7 +17,7 @@ FICA = 0.12
 REGULAR_TIME = 40
 
 
-def GrossPay(employeeName, rateOfPay):
+def GrossPay(employee):
     """
     Calculats gross pay for a single employee
     
@@ -34,12 +34,18 @@ def GrossPay(employeeName, rateOfPay):
         the total pre-tax pay for this employee during this pay period.
 
     """
-    hours = float(input(f"Enter {employeeName}'s hours for this pay period: "))
-    if hours <= REGULAR_TIME:
-        gross = hours * rateOfPay
+    if isinstance(employee, Employee):
+        if isinstance(employee, Manager):
+            hours = REGULAR_TIME
+        else:
+            hours = float(input(f"Enter {employee.getName()}'s hours for this pay period: "))
+        if hours <= REGULAR_TIME:
+            gross = hours * employee.getRate()
+        else:
+            gross = REGULAR_TIME * employee.getRate() + 1.5 * (hours - REGULAR_TIME) * employee.getRate()
+        return gross
     else:
-        gross = REGULAR_TIME * rateOfPay + 1.5 * (hours - REGULAR_TIME) * rateOfPay
-    return gross
+        return 0
 
 
 
