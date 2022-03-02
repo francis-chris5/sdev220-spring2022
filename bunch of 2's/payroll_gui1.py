@@ -43,6 +43,8 @@ def GrossPay(event):
         
         
         empOutput[e]["text"] = gross
+        
+    UpdateStatus(event, "updated everybody's gross pay...")
 
 
 def UpdateStatus(event, status):
@@ -71,25 +73,26 @@ btnGrossPay = tk.Button(tbMain, image=imgGrossPay)
 btnGrossPay.bind("<Button-1>", lambda event: GrossPay(event))
 
 
-nbMain = ttk.Notebook(gui)
 
-tabBob = ttk.Frame(nbMain)
-lblBob = tk.Label(tabBob, text="Enter Bob's Hours")
-txtBob = tk.Entry(tabBob)
-lblBobOut = tk.Label(tabBob, text="")
-nbMain.add(tabBob, text="Bob")
+ioPrimary = tk.Frame(gui)
 
-tabSally = ttk.Frame(nbMain)
-lblSally = tk.Label(tabSally, text="Enter Sally's Hours")
-txtSally = tk.Entry(tabSally)
-lblSallyOut = tk.Label(tabSally, text="")
-nbMain.add(tabSally, text="Sally")
+#tabBob = ttk.Frame(ioPrimary)
+lblBob = tk.Label(ioPrimary, text="Enter Bob's Hours")
+txtBob = tk.Entry(ioPrimary)
+lblBobOut = tk.Label(ioPrimary, text="")
 
-tabBecky = ttk.Frame(nbMain)
-lblBecky = tk.Label(tabBecky, text="Enter Becky's Hours")
-txtBecky = tk.Entry(tabBecky)
-lblBeckyOut = tk.Label(tabBecky, text="")
-nbMain.add(tabBecky, text="Becky")
+
+#tabSally = ttk.Frame(ioPrimary)
+lblSally = tk.Label(ioPrimary, text="Enter Sally's Hours")
+txtSally = tk.Entry(ioPrimary)
+lblSallyOut = tk.Label(ioPrimary, text="")
+
+
+#tabBecky = ttk.Frame(ioPrimary)
+lblBecky = tk.Label(ioPrimary, text="Enter Becky's Hours")
+txtBecky = tk.Entry(ioPrimary)
+lblBeckyOut = tk.Label(ioPrimary, text="")
+
 
 
 gui.bind("<Return>", lambda event: GrossPay(event))
@@ -108,7 +111,7 @@ lblStatus = tk.Label(sbMain, text="Status: ready....")
 
 gui.config(menu=mnMain)
 tbMain.pack(fill="both")
-nbMain.pack(fill="both", expand=True)
+ioPrimary.pack(fill="both", expand=True)
 sbMain.pack(fill="both")
 
 btnGrossPay.grid(row=0, column=0, padx=5, pady=5)
@@ -116,12 +119,12 @@ btnGrossPay.grid(row=0, column=0, padx=5, pady=5)
 lblBob.grid(row=0, column=0, padx=10, pady=45)
 txtBob.grid(row=1, column=0, padx=10, pady=23)
 lblBobOut.grid(row=2, column=0, padx=10, pady=18)
-lblSally.grid(row=0, column=0, padx=10, pady=45)
-txtSally.grid(row=1, column=0, padx=10, pady=23)
-lblSallyOut.grid(row=2, column=0, padx=10, pady=18)
-lblBecky.grid(row=0, column=0, padx=10, pady=45)
-txtBecky.grid(row=1, column=0, padx=10, pady=23)
-lblBeckyOut.grid(row=2, column=0, padx=10, pady=18)
+lblSally.grid(row=0, column=1, padx=10, pady=45)
+txtSally.grid(row=1, column=1, padx=10, pady=23)
+lblSallyOut.grid(row=2, column=1, padx=10, pady=18)
+lblBecky.grid(row=0, column=2, padx=10, pady=45)
+txtBecky.grid(row=1, column=2, padx=10, pady=23)
+lblBeckyOut.grid(row=2, column=2, padx=10, pady=18)
 
 
 lblStatus.grid(row=0, column=0)
