@@ -14,6 +14,8 @@ sys.path.insert(0, "../pyOffice")
 import tkinter as tk
 import tkinter.ttk as ttk
 from employees import *
+from tabs import *
+
 
 employees = [
     Laborer(name="Bob", rate=17.34, vacationDays = "july 4", department="labor"),
@@ -73,23 +75,25 @@ btnGrossPay.bind("<Button-1>", lambda event: GrossPay(event))
 
 nbMain = ttk.Notebook(gui)
 
-tabBob = ttk.Frame(nbMain)
-lblBob = tk.Label(tabBob, text="Enter Bob's Hours")
-txtBob = tk.Entry(tabBob)
-lblBobOut = tk.Label(tabBob, text="")
-nbMain.add(tabBob, text="Bob")
 
-tabSally = ttk.Frame(nbMain)
-lblSally = tk.Label(tabSally, text="Enter Sally's Hours")
-txtSally = tk.Entry(tabSally)
-lblSallyOut = tk.Label(tabSally, text="")
-nbMain.add(tabSally, text="Sally")
+tabBob = HourlyTab(nbMain)
+tabBob.setEmployee("Bob")
+nbMain.add(tabBob, text=tabBob.getEmployee())
 
-tabBecky = ttk.Frame(nbMain)
-lblBecky = tk.Label(tabBecky, text="Enter Becky's Hours")
-txtBecky = tk.Entry(tabBecky)
-lblBeckyOut = tk.Label(tabBecky, text="")
-nbMain.add(tabBecky, text="Becky")
+
+tabSally = HourlyTab(nbMain)
+tabSally.setEmployee("Sally")
+nbMain.add(tabSally, text=tabSally.getEmployee())
+
+
+tabBecky = SalaryTab(nbMain)
+tabBecky.setEmployee("Becky")
+nbMain.add(tabBecky, text=tabBecky.getEmployee())
+
+
+tabDavid = HourlyTab(nbMain)
+tabDavid.setEmployee("David")
+nbMain.add(tabDavid, text=tabDavid.getEmployee())
 
 
 gui.bind("<Return>", lambda event: GrossPay(event))
@@ -113,15 +117,6 @@ sbMain.pack(fill="both")
 
 btnGrossPay.grid(row=0, column=0, padx=5, pady=5)
 
-lblBob.grid(row=0, column=0, padx=10, pady=45)
-txtBob.grid(row=1, column=0, padx=10, pady=23)
-lblBobOut.grid(row=2, column=0, padx=10, pady=18)
-lblSally.grid(row=0, column=0, padx=10, pady=45)
-txtSally.grid(row=1, column=0, padx=10, pady=23)
-lblSallyOut.grid(row=2, column=0, padx=10, pady=18)
-lblBecky.grid(row=0, column=0, padx=10, pady=45)
-txtBecky.grid(row=1, column=0, padx=10, pady=23)
-lblBeckyOut.grid(row=2, column=0, padx=10, pady=18)
 
 
 lblStatus.grid(row=0, column=0)
