@@ -50,7 +50,8 @@ class HourlyTab(SalaryTab):
         
         self.input.grid(row=1, column=0, padx=10, pady=23)
 
-
+    def getInput(self):
+        return self.input
 
 
 
