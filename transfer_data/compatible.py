@@ -51,13 +51,53 @@ with open("dataFile1.json", "r") as jsonHandler:
 
 
 
-f"this string is formatted"
-
-b"this string is unicode"
 
 
+########################  XML
+
+# people = [Person("Charlie", 22, "Charlestown"),
+#           Person("Sally", 38, "Salem"), 
+#           Person("Alan", 16, "New Albany"), 
+#           Person("Jeff", 22, "Jeffersonville")]
+
+nicknames = ["big C", "sal", "alien", "elf"]
+import xml.etree.ElementTree as et
 
 
+## for i in range(len(peopl))
+
+root = et.Element("people")
+for count, p in enumerate(people):
+    branch = et.SubElement(root, "person")
+    
+    leaf1 = et.SubElement(branch, "name")
+    leaf1.text = p.name
+    leaf1.attrib = {"nickname": nicknames[count]}
+    
+    
+    leaf2 = et.SubElement(branch, "age")
+    leaf2.text = str(p.age)
+    leaf3 = et.SubElement(branch, "town")
+    leaf3.text = p.town
+    
+tree = et.ElementTree(root)
+
+
+with open("dataFile1.xml", "wb") as xmlHandler:
+    tree.write(xmlHandler)
+    
+
+newTree = et.parse("dataFile1.xml")
+
+newRoot = newTree.getroot()
+
+for i in range(len(newRoot)):
+    for j in range(len(newRoot[i])):
+        print(newRoot[i][j].tag + ": " + newRoot[i][j].text)
+        print(newRoot[i][j].attrib)
+    
+
+    
 
 
 
