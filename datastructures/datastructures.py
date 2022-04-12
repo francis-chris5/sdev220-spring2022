@@ -33,3 +33,84 @@ class Crew():
         return str(self.name) + " is the " + str(self.position) + " and makes " + str(self.rate) + " per hour."
         
     
+    
+
+
+
+
+
+
+class Stack():
+    def __init__(self):
+        self.__stuff = []
+    
+    def push(self, item):
+        self.__stuff.insert(0, item)
+    
+    
+    def pop(self):
+        top = self.__stuff[0]
+        self.__stuff.remove(top)
+        return top
+    
+    
+    def peek(self):
+        return self.__stuff[0]
+    
+    def size(self):
+        return len(self.__stuff)
+    
+    
+    def __str__(self):
+        return str(self.__stuff)
+
+
+
+class Queue():
+    def __init__(self):
+        self.__stuff = []
+        
+        
+    ## or enqueue
+    def poll(self, item):
+        self.__stuff.append(item)
+    
+    
+    ## or dequeue ("deck")
+    def remove(self):
+        top = self.__stuff[0]
+        self.__stuff.remove(top)
+        return top
+    
+    
+    
+    def peek(self):
+        return self.__stuff[0]
+    
+    
+    def size(self):
+        return len(self.__stuff)
+    
+    def __str__(self):
+        return str(self.__stuff)
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#############################
+    
